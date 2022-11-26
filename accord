@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+
+<SCRIPT type=text/javascript>
+<!--
+
+var t;
+function tot()
+{
+  t=0;
+  for(i=0;i<4;i++)
+        {
+          for(j=1;j<5;j++)
+          {
+      if(eval("document.f.r"+j+"["+i+"].checked"))
+      t+=parseInt(eval("document.f.r"+j+"["+i+"].value"));
+                }
+        }
+        rpt=confirm("Your score is : "+t+"\n\nReset form ?");
+  if(rpt)document.f.reset();
+}
+
+// -->
+</SCRIPT>
+
+</HEAD>
+<BODY>
+<CENTER>
+<FORM name=f><B>1.</B> A<INPUT type=radio value=1 name=r1> B<INPUT type=radio
+value=0 name=r1> C<INPUT type=radio value=0 name=r1> D<INPUT type=radio value=0
+name=r1>
+<P><B>2.</B> A<INPUT type=radio value=0 name=r2> B<INPUT type=radio value=1
+name=r2> C<INPUT type=radio value=0 name=r2> D<INPUT type=radio value=0 name=r2>
+
+<P><B>3.</B> A<INPUT type=radio value=0 name=r3> B<INPUT type=radio value=0
+name=r3> C<INPUT type=radio value=1 name=r3> D<INPUT type=radio value=0 name=r3>
+
+<P><B>4.</B> A<INPUT type=radio value=0 name=r4> B<INPUT type=radio value=0
+name=r4> C<INPUT type=radio value=0 name=r4> D<INPUT type=radio value=1 name=r4>
+<p>정답<br> 1-a,  2-b,  3-c,  4-d,<P>
+<P><INPUT onclick=tot() type=button value="정답 맞추기">
+
+</FORM>
+</CENTER>
+</BODY>
+</HTML> 
+
+----------------------------------------------------------------------------------------------------------
